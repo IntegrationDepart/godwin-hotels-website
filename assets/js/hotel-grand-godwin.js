@@ -329,6 +329,14 @@ const AMENITY_DATA = [
   },
   {
     category: "sights",
+    name: "Swaminarayan Akshardham Temple",
+    badge: "9.5 km · 20 min drive / Metro",
+    desc: "Spiritual & Cultural Site: World's largest comprehensive Hindu temple complex, famed for pink sandstone mandir, carved pillars, musical fountains & exhibitions.",
+    icon: "fa-gopuram",
+    destQuery: "Swaminarayan Akshardham, Noida Mor, Pandav Nagar, New Delhi"
+  },
+  {
+    category: "sights",
     name: "Lotus Temple (Bahá'í House of Worship)",
     badge: "13 km · 30 min drive",
     desc: "Spiritual & Cultural Site: Pure white marble lotus-shaped architectural marvel welcoming people of all faiths for silent meditation.",
