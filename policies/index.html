@@ -334,33 +334,32 @@
 <body>
 
   <!-- ══════════════════════════════════════════
-       SITE HEADER
+       TOP BAR
   ══════════════════════════════════════════ -->
-  <header class="site-header" id="siteHeader" style="background:#080f1d;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
-    <div class="top-bar">
-      <div class="container-wide">
-        <div class="top-bar-inner">
-          <div class="top-bar-left">
-            <span class="top-badge"><i class="fa-solid fa-hotel"></i> Central New Delhi Boutique Hotels</span>
-            <span class="top-divider">|</span>
-            <span class="top-lead"><i class="fa-solid fa-shield-halved" style="color:var(--gold-400);"></i> Guest Standards &amp; Policies</span>
+  <div class="top-bar">
+    <div class="container-wide">
+      <div class="top-bar-inner">
+        <div class="top-bar-contacts">
+          <div class="top-contact-group">
+            <a href="tel:+918860081994" class="top-phone-badge" title="Call Reservations: +91 88600 81994">
+              <i class="fa-solid fa-phone"></i> +91 88600 81994
+            </a>
+            <a href="https://wa.me/918860081994?text=Hello%20Godwin%20Hotels%20Delhi,%20I%20have%20a%20question%20regarding%20hotel%20policies."
+               target="_blank" rel="noopener noreferrer" class="top-wa-badge" title="Chat on WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
           </div>
-          <div class="top-bar-contacts">
-            <div class="top-contact-group">
-              <a href="tel:+918860081994" class="top-phone-badge" title="Call Reservations: +91 88600 81994">
-                <i class="fa-solid fa-phone"></i> +91 88600 81994
-              </a>
-              <a href="https://wa.me/918860081994?text=Hello%20Godwin%20Hotels%20Delhi,%20I%20have%20a%20question%20regarding%20hotel%20policies."
-                 target="_blank" rel="noopener noreferrer" class="top-wa-badge" title="Chat on WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-            <a href="mailto:book@godwinhotels.com" class="hide-mobile"><i class="fa-solid fa-envelope"></i> book@godwinhotels.com</a>
-          </div>
+          <a href="mailto:book@godwinhotels.com" class="hide-mobile"><i class="fa-solid fa-envelope"></i> book@godwinhotels.com</a>
+          <span class="hide-mobile"><i class="fa-solid fa-location-dot"></i> Arakashan Road, Paharganj, New Delhi</span>
         </div>
       </div>
     </div>
+  </div>
 
+  <!-- ══════════════════════════════════════════
+       SITE HEADER / NAVBAR
+  ══════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader">
     <nav class="navbar" id="navbar" aria-label="Main Navigation">
       <div class="container-wide">
         <div class="nav-inner">
@@ -369,7 +368,7 @@
           <a href="../" class="brand-logo" aria-label="Godwin Hotels Delhi Home">
             <img src="../assets/images/godwin_logo.svg" alt="Godwin Hotels Logo" class="brand-crest-img" width="46" height="46">
             <div class="brand-text-wrap">
-              <span class="brand-name" style="color:#fff;">GODWIN</span>
+              <span class="brand-name">GODWIN</span>
               <span class="brand-sub">Hotels &bull; New Delhi</span>
             </div>
           </a>
@@ -410,7 +409,7 @@
             <i class="fa-regular fa-calendar-check"></i> Book Now
           </a>
 
-          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false" style="color:#fff;">
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
             <i class="fa-solid fa-bars" id="menuIcon"></i>
           </button>
 
