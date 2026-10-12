@@ -250,14 +250,15 @@ function updateBill() {
   const roomPrice  = parseInt(roomSel?.selectedOptions[0]?.dataset.price || 0);
   const guestCount = parseInt(guestSel?.value || 2);
   const roomCount  = parseInt(roomsSel?.value || 1);
-  const bfCost     = breakfast?.checked ? 350 * guestCount : 0;
-  const trCost     = transfer?.checked  ? 950 : 0;
 
   let nights = 1;
   if (checkin && checkout) {
     const diff = (new Date(checkout) - new Date(checkin)) / 86400000;
     nights = Math.max(1, Math.round(diff));
   }
+
+  const bfCost     = breakfast?.checked ? 550 * guestCount * nights : 0;
+  const trCost     = transfer?.checked  ? 950 : 0;
 
   const subtotal = roomPrice * nights * roomCount + bfCost + trCost;
   const gst      = Math.round(subtotal * 0.12);
