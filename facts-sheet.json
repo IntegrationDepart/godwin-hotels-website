@@ -247,7 +247,8 @@
           "sizeSqMt": 42,
           "bedType": "Master King Bed with Lounge Suite",
           "bathrooms": 1,
-          "maxOccupancy": "Max 3 Guests"
+          "maxOccupancy": "Max 3 Guests",
+          "image": "https://godwinhotels.com/assets/images/deluxe_premier_studio_1024x682.jpg"
         }
       ]
     }
