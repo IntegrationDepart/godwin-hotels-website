@@ -42,6 +42,82 @@
   <link rel="manifest" href="../site.webmanifest">
   <link rel="shortcut icon" href="../favicon.ico">
 
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://godwinhotels.com/policies/#webpage",
+        "url": "https://godwinhotels.com/policies/",
+        "name": "Hotel Policies, Child Policy, Pickup Terms & Privacy | Godwin Hotels New Delhi",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://godwinhotels.com/#website",
+          "name": "Godwin Hotels New Delhi",
+          "url": "https://godwinhotels.com"
+        },
+        "description": "Official guest policies for Hotel Grand Godwin & Hotel Godwin Deluxe, New Delhi including check-in (1:00 PM / 1.00 Noon), check-out (11:00 AM), child policy, airport pickup terms, and in-house rules."
+      },
+      {
+        "@type": "Hotel",
+        "@id": "https://godwinhotels.com/#hotel-group",
+        "name": "Godwin Hotels New Delhi",
+        "url": "https://godwinhotels.com",
+        "checkinTime": "13:00",
+        "checkoutTime": "11:00",
+        "telephone": "+91-8860081994",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "8502/41, Arakashan Road, Ram Nagar, Paharganj",
+          "addressLocality": "New Delhi",
+          "postalCode": "110055",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://godwinhotels.com/policies/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are the check-in and check-out times at Godwin Hotels?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard check-in time is at 1:00 PM (1.00 Noon / 13:00) and check-out time is at 11:00 AM at both Hotel Grand Godwin and Hotel Godwin Deluxe. Early check-in from 10:00 AM is complimentary subject to room availability upon arrival."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the child policy at Godwin Hotels?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Children up to 5 years stay free when sharing existing bedding with parents. For children aged 6 to 12 years, an extra bed is ₹1,000 INR per night (Room Only) or ₹1,200 INR per night with buffet breakfast. Extra adult (13+ years) is ₹2,000 INR per night with extra roll-away bed."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the terms for complimentary airport pickup?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Free airport or railway station pickup vehicle hire is complimentary on direct bookings, on the condition that the guest pays the mandatory commercial parking fee of ₹485 INR directly. The service includes up to 30 minutes driver waiting time from touchdown/train arrival; any delay beyond 30 minutes requires the guest to pay the actual parking authority charge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is outside food or cutlery allowed in rooms?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Outside food and food delivery apps (Zomato, Swiggy) are strictly prohibited in guest rooms and dining areas under FSSAI food hygiene regulations. Hotel crockery and cutlery are not provided for external food. 24-hour in-house room service is available."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -652,6 +728,23 @@
           By reserving a room or checking in to Hotel Grand Godwin or Hotel Godwin Deluxe, guests agree to abide by the terms and conditions outlined below:
         </p>
 
+        <!-- Official Check-In & Check-Out Timings Display Card -->
+        <div class="policy-alert gold" style="display:flex;gap:1.5rem;align-items:center;justify-content:space-around;flex-wrap:wrap;text-align:center;margin:1.5rem 0;border:2px solid rgba(200,146,46,0.35);background:#fffcf4;border-radius:14px;padding:1.5rem 1rem;">
+          <div style="flex:1;min-width:220px;">
+            <i class="fa-solid fa-clock-rotate-left" style="font-size:2rem;color:var(--gold-600);margin-bottom:0.4rem;display:block;"></i>
+            <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;">Standard Check-In Time</div>
+            <div style="font-size:1.55rem;font-weight:800;color:var(--navy-900);margin:0.25rem 0;">1:00 PM (1.00 Noon)</div>
+            <div style="font-size:0.83rem;color:var(--text-muted);">Complimentary early check-in from 10:00 AM (subject to availability)</div>
+          </div>
+          <div style="width:1px;height:70px;background:rgba(200,146,46,0.25);"></div>
+          <div style="flex:1;min-width:220px;">
+            <i class="fa-solid fa-clock" style="font-size:2rem;color:var(--gold-600);margin-bottom:0.4rem;display:block;"></i>
+            <div style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);font-weight:700;">Standard Check-Out Time</div>
+            <div style="font-size:1.55rem;font-weight:800;color:var(--navy-900);margin:0.25rem 0;">11:00 AM (Morning)</div>
+            <div style="font-size:0.83rem;color:var(--text-muted);">Free 24-hour secure luggage storage upon check-out</div>
+          </div>
+        </div>
+
         <ul class="policy-list">
           <li>
             <i class="fa-solid fa-id-card"></i>
@@ -659,7 +752,7 @@
           </li>
           <li>
             <i class="fa-solid fa-clock"></i>
-            <strong>Check-In &amp; Check-Out Hours:</strong> Standard check-in begins at <strong>1:00 PM (13:00)</strong> and check-out is by <strong>11:00 AM (11:00)</strong>. Complimentary early check-in from 10:00 AM is offered subject to room availability upon arrival. Guaranteed early morning check-in requires room reservation from the preceding night.
+            <strong>Check-In &amp; Check-Out Hours:</strong> Standard check-in begins at <strong>1:00 PM (1.00 Noon / 13:00)</strong> and check-out is by <strong>11:00 AM (11:00 AM)</strong>. Complimentary early check-in from 10:00 AM is offered subject to room availability upon arrival. Guaranteed early morning check-in requires room reservation from the preceding night. Late check-out beyond 11:00 AM is subject to room availability and may incur nominal additional day-use charges.
           </li>
           <li>
             <i class="fa-solid fa-shield-halved"></i>

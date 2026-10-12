@@ -23,6 +23,7 @@
     "generalPolicies": {
       "checkinTime": "13:00",
       "checkoutTime": "11:00",
+      "checkinCheckoutHours": "Check-in: 1:00 PM (1.00 Noon / 13:00) | Check-out: 11:00 AM",
       "earlyCheckinPolicy": "Early check-in from 10:00 AM is complimentary subject to room availability upon arrival; guaranteed early morning check-in requires reservation from the preceding night.",
       "cancellationPolicy": "Free cancellation is permitted up to 24-48 hours prior to the scheduled check-in date. Cancellations made within the late cancellation window incur a 1-night room charge.",
       "childPolicy": "Children up to 5 years stay free sharing existing bed with parents. For children aged 6 to 12 years, extra bed is ₹1,000 INR per night (Room Only) or ₹1,200 INR per night with breakfast.",
