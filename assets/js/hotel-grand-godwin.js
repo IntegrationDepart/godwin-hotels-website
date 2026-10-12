@@ -519,6 +519,8 @@ function initGrandGodwinBooking() {
   const waBtn = document.getElementById('resWhatsAppBtn');
 
   const ROOM_RATES = {
+    'Superior Room (39 Rooms Total)': 3800,
+    'Superior Room': 3800,
     'Deluxe Room (39 Rooms Total)': 3800,
     'Deluxe Room': 3800,
     'Executive Room': 4400,
@@ -596,7 +598,7 @@ function initGrandGodwinBooking() {
       email: document.getElementById('resGuestEmail')?.value || '',
       phone: document.getElementById('resGuestPhone')?.value || '',
       destination: 'Hotel Grand Godwin, New Delhi (39 Rooms Boutique)',
-      room: roomSelect?.value || 'Deluxe Room',
+      room: roomSelect?.value || 'Superior Room',
       checkin: document.getElementById('resCheckin')?.value || '',
       checkout: document.getElementById('resCheckout')?.value || '',
       address: document.getElementById('resGuestAddress')?.value || '',

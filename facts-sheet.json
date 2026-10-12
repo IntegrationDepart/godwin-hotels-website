@@ -110,14 +110,14 @@
       ],
       "rooms": [
         {
-          "type": "Deluxe Room",
+          "type": "Superior Room",
           "basePriceINR": 3800,
           "sizeSqFt": 180,
           "sizeSqMt": 17,
           "bedType": "Double Bed",
           "bathrooms": 1,
           "maxOccupancy": "Max 3 Guests",
-          "image": "https://godwinhotels.com/assets/images/grand_godwin_deluxe_room_1024x682.jpg"
+          "image": "https://godwinhotels.com/assets/images/grand_godwin_superior_room_1024x682.jpg"
         },
         {
           "type": "Executive Room",
