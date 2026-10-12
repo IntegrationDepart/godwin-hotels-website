@@ -1756,3 +1756,77 @@ figure.semantic-figure figcaption strong {
   .responsive-picture.desktop-hero { aspect-ratio: 16 / 9; }
 }
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   GLOBAL RESPONSIVE PICTURE & IMAGE COMPONENT UTILITIES
+   Standardized layout classes for fluid multi-device adaptability,
+   zero Cumulative Layout Shift (CLS), and Retina clarity.
+───────────────────────────────────────────────────────────────────────────── */
+.hotel-img-frame {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  background-color: var(--ivory-100, #f4ede0);
+}
+
+.hotel-img-frame picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hotel-img-frame img,
+.responsive-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  backface-visibility: hidden;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+/* Aspect Ratio Utilities */
+.hotel-img-frame.aspect-card,
+.img-aspect-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.hotel-img-frame.aspect-wide,
+.img-aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.hotel-img-frame.aspect-photo,
+.img-aspect-3-2 {
+  aspect-ratio: 3 / 2;
+}
+
+.hotel-img-frame.aspect-square,
+.img-aspect-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+/* Micro-interaction Hover Effects */
+.hotel-img-frame.hover-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* Adaptive Breakpoint Rules */
+@media (max-width: 640px) {
+  .hotel-img-frame.adaptive-hero {
+    aspect-ratio: 4 / 3;
+  }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hotel-img-frame.adaptive-hero {
+    aspect-ratio: 16 / 10;
+  }
+}
+@media (min-width: 1025px) {
+  .hotel-img-frame.adaptive-hero {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+

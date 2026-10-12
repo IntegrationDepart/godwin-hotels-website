@@ -87,6 +87,30 @@
             "width": 1200,
             "height": 896,
             "representativeOfPage": true
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://godwinhotels.com/assets/images/grand_godwin_deluxe_room_1024x682.jpg",
+            "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_deluxe_room_1024x682.webp",
+            "caption": "Deluxe Room with plush double bed, tea amenities, and centralized warmer at Hotel Grand Godwin New Delhi"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://godwinhotels.com/assets/images/grand_godwin_executive_room_1024x682.jpg",
+            "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_executive_room_1024x682.webp",
+            "caption": "Executive Room with boutique king double bed, workstation, and ambient illumination at Hotel Grand Godwin New Delhi"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://godwinhotels.com/assets/images/grand_godwin_twin_room_1024x682.jpg",
+            "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_twin_room_1024x682.webp",
+            "caption": "Executive Twin Room with two single beds, reading lights, and central warmer at Hotel Grand Godwin New Delhi"
+          },
+          {
+            "@type": "ImageObject",
+            "url": "https://godwinhotels.com/assets/images/grand_godwin_studio_room_1024x682.jpg",
+            "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_studio_room_1024x682.webp",
+            "caption": "Studio Room with Air-Purifier, spacious 275 sq.ft layout, and panoramic city views at Hotel Grand Godwin New Delhi"
           }
         ],
         "numberOfRooms": 39,
@@ -140,25 +164,49 @@
             "@type": "HotelRoom",
             "name": "Deluxe Room",
             "description": "Comfortable 180 sq.ft (17 sq.mt) boutique room with double bed, 1 bathroom, centralized warmer, and high-speed Wi-Fi.",
-            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 }
+            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://godwinhotels.com/assets/images/grand_godwin_deluxe_room_1024x682.jpg",
+              "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_deluxe_room_1024x682.webp",
+              "caption": "Deluxe Room at Hotel Grand Godwin New Delhi"
+            }
           },
           {
             "@type": "HotelRoom",
             "name": "Executive Room",
             "description": "Sophisticated 225 sq.ft (21 sq.mt) executive room with double bed, 1 bathroom, dedicated workstation, minibar, and premium luxury toiletries.",
-            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 }
+            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://godwinhotels.com/assets/images/grand_godwin_executive_room_1024x682.jpg",
+              "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_executive_room_1024x682.webp",
+              "caption": "Executive Room at Hotel Grand Godwin New Delhi"
+            }
           },
           {
             "@type": "HotelRoom",
             "name": "Executive Twin Room",
             "description": "Contemporary 225 sq.ft (21 sq.mt) room with 2 x single bed(s), 1 bathroom, reading lamps, rain shower, and centralized warmer.",
-            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 }
+            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://godwinhotels.com/assets/images/grand_godwin_twin_room_1024x682.jpg",
+              "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_twin_room_1024x682.webp",
+              "caption": "Executive Twin Room at Hotel Grand Godwin New Delhi"
+            }
           },
           {
             "@type": "HotelRoom",
             "name": "Studio Room with Air-Purifier",
             "description": "Spacious 275 sq.ft (26 sq.mt) studio room with air-purifier, city view, double bed, 1 bathroom, and coffee bar amenities.",
-            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 }
+            "occupancy": { "@type": "QuantitativeValue", "maxValue": 3 },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://godwinhotels.com/assets/images/grand_godwin_studio_room_1024x682.jpg",
+              "contentUrl": "https://godwinhotels.com/assets/images/grand_godwin_studio_room_1024x682.webp",
+              "caption": "Studio Room with Air-Purifier at Hotel Grand Godwin New Delhi"
+            }
           }
         ]
       },
@@ -529,7 +577,23 @@
           <article class="room-cat-card" id="cat-deluxe">
             <div class="room-cat-badge">Boutique Comfort</div>
             <div class="room-cat-img-box">
-              <img src="../assets/images/room_deluxe.jpg" alt="Deluxe Room at Hotel Grand Godwin New Delhi" loading="lazy">
+              <picture>
+                <source type="image/avif" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_deluxe_room_card_400x300.avif 1x, ../assets/images/grand_godwin_deluxe_room_card_800x600.avif 2x">
+                <source type="image/webp" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_deluxe_room_card_400x300.webp 1x, ../assets/images/grand_godwin_deluxe_room_card_800x600.webp 2x">
+                <source type="image/avif"
+                        srcset="../assets/images/grand_godwin_deluxe_room_card_800x600.avif 800w, ../assets/images/grand_godwin_deluxe_room_card_400x300.avif 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <source type="image/webp"
+                        srcset="../assets/images/grand_godwin_deluxe_room_card_800x600.webp 800w, ../assets/images/grand_godwin_deluxe_room_card_400x300.webp 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <img src="../assets/images/grand_godwin_deluxe_room.jpg"
+                     srcset="../assets/images/grand_godwin_deluxe_room_card_800x600.jpg 800w, ../assets/images/grand_godwin_deluxe_room_card_400x300.jpg 400w"
+                     sizes="(max-width: 768px) 100vw, 420px"
+                     alt="Deluxe Room at Hotel Grand Godwin New Delhi — boutique double bed with traditional Indian runner, tea station, armchair, and centralized room warmer"
+                     loading="lazy" decoding="async" width="800" height="600">
+              </picture>
             </div>
             <div class="room-cat-body">
               <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.25rem;">
@@ -568,7 +632,23 @@
           <article class="room-cat-card" id="cat-executive">
             <div class="room-cat-badge" style="background:#1b263b;">Executive Choice</div>
             <div class="room-cat-img-box">
-              <img src="../assets/images/room_executive.jpg" alt="Executive Room at Hotel Grand Godwin New Delhi" loading="lazy">
+              <picture>
+                <source type="image/avif" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_executive_room_card_400x300.avif 1x, ../assets/images/grand_godwin_executive_room_card_800x600.avif 2x">
+                <source type="image/webp" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_executive_room_card_400x300.webp 1x, ../assets/images/grand_godwin_executive_room_card_800x600.webp 2x">
+                <source type="image/avif"
+                        srcset="../assets/images/grand_godwin_executive_room_card_800x600.avif 800w, ../assets/images/grand_godwin_executive_room_card_400x300.avif 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <source type="image/webp"
+                        srcset="../assets/images/grand_godwin_executive_room_card_800x600.webp 800w, ../assets/images/grand_godwin_executive_room_card_400x300.webp 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <img src="../assets/images/grand_godwin_executive_room.jpg"
+                     srcset="../assets/images/grand_godwin_executive_room_card_800x600.jpg 800w, ../assets/images/grand_godwin_executive_room_card_400x300.jpg 400w"
+                     sizes="(max-width: 768px) 100vw, 420px"
+                     alt="Executive Room at Hotel Grand Godwin New Delhi — boutique king double bed, backlit accent wall, executive workstation, and lounge seating"
+                     loading="lazy" decoding="async" width="800" height="600">
+              </picture>
             </div>
             <div class="room-cat-body">
               <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.25rem;">
@@ -607,7 +687,23 @@
           <article class="room-cat-card" id="cat-twin">
             <div class="room-cat-badge" style="background:#243d65;">Twin Beds</div>
             <div class="room-cat-img-box">
-              <img src="../assets/images/room_twin.jpg" alt="Executive Twin Room at Hotel Grand Godwin New Delhi" loading="lazy">
+              <picture>
+                <source type="image/avif" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_twin_room_card_400x300.avif 1x, ../assets/images/grand_godwin_twin_room_card_800x600.avif 2x">
+                <source type="image/webp" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_twin_room_card_400x300.webp 1x, ../assets/images/grand_godwin_twin_room_card_800x600.webp 2x">
+                <source type="image/avif"
+                        srcset="../assets/images/grand_godwin_twin_room_card_800x600.avif 800w, ../assets/images/grand_godwin_twin_room_card_400x300.avif 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <source type="image/webp"
+                        srcset="../assets/images/grand_godwin_twin_room_card_800x600.webp 800w, ../assets/images/grand_godwin_twin_room_card_400x300.webp 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <img src="../assets/images/grand_godwin_twin_room.jpg"
+                     srcset="../assets/images/grand_godwin_twin_room_card_800x600.jpg 800w, ../assets/images/grand_godwin_twin_room_card_400x300.jpg 400w"
+                     sizes="(max-width: 768px) 100vw, 420px"
+                     alt="Executive Twin Room at Hotel Grand Godwin New Delhi — two separate plush single beds, reading lights, vanity counter, and central warmer"
+                     loading="lazy" decoding="async" width="800" height="600">
+              </picture>
             </div>
             <div class="room-cat-body">
               <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.25rem;">
@@ -646,7 +742,23 @@
           <article class="room-cat-card" id="cat-studio">
             <div class="room-cat-badge" style="background:var(--gold-600);">Spacious Studio &amp; Air-Purifier</div>
             <div class="room-cat-img-box">
-              <img src="../assets/images/room_studio.jpg" alt="Studio Room at Hotel Grand Godwin New Delhi" loading="lazy">
+              <picture>
+                <source type="image/avif" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_studio_room_card_400x300.avif 1x, ../assets/images/grand_godwin_studio_room_card_800x600.avif 2x">
+                <source type="image/webp" media="(max-width: 640px)"
+                        srcset="../assets/images/grand_godwin_studio_room_card_400x300.webp 1x, ../assets/images/grand_godwin_studio_room_card_800x600.webp 2x">
+                <source type="image/avif"
+                        srcset="../assets/images/grand_godwin_studio_room_card_800x600.avif 800w, ../assets/images/grand_godwin_studio_room_card_400x300.avif 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <source type="image/webp"
+                        srcset="../assets/images/grand_godwin_studio_room_card_800x600.webp 800w, ../assets/images/grand_godwin_studio_room_card_400x300.webp 400w"
+                        sizes="(max-width: 768px) 100vw, 420px">
+                <img src="../assets/images/grand_godwin_studio_room.jpg"
+                     srcset="../assets/images/grand_godwin_studio_room_card_800x600.jpg 800w, ../assets/images/grand_godwin_studio_room_card_400x300.jpg 400w"
+                     sizes="(max-width: 768px) 100vw, 420px"
+                     alt="Studio Room with Air-Purifier at Hotel Grand Godwin New Delhi — spacious 275 sq.ft layout, double bed, rich mahogany decor, minibar, and city views"
+                     loading="lazy" decoding="async" width="800" height="600">
+              </picture>
             </div>
             <div class="room-cat-body">
               <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:0.5rem;margin-bottom:0.25rem;">

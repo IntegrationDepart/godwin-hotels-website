@@ -97,7 +97,8 @@
           "sizeSqMt": 17,
           "bedType": "Double Bed",
           "bathrooms": 1,
-          "maxOccupancy": "Max 3 Guests"
+          "maxOccupancy": "Max 3 Guests",
+          "image": "https://godwinhotels.com/assets/images/grand_godwin_deluxe_room_1024x682.jpg"
         },
         {
           "type": "Executive Room",
@@ -106,7 +107,8 @@
           "sizeSqMt": 21,
           "bedType": "Double Bed",
           "bathrooms": 1,
-          "maxOccupancy": "Max 3 Guests"
+          "maxOccupancy": "Max 3 Guests",
+          "image": "https://godwinhotels.com/assets/images/grand_godwin_executive_room_1024x682.jpg"
         },
         {
           "type": "Executive Twin Room",
@@ -115,7 +117,8 @@
           "sizeSqMt": 21,
           "bedType": "2 x Single Bed(s)",
           "bathrooms": 1,
-          "maxOccupancy": "Max 3 Guests"
+          "maxOccupancy": "Max 3 Guests",
+          "image": "https://godwinhotels.com/assets/images/grand_godwin_twin_room_1024x682.jpg"
         },
         {
           "type": "Studio Room with Air-Purifier",
@@ -125,7 +128,8 @@
           "bedType": "Double Bed",
           "bathrooms": 1,
           "view": "City View",
-          "maxOccupancy": "Max 3 Guests"
+          "maxOccupancy": "Max 3 Guests",
+          "image": "https://godwinhotels.com/assets/images/grand_godwin_studio_room_1024x682.jpg"
         }
       ]
     },
