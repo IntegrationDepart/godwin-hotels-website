@@ -8,6 +8,11 @@
     "centralLandline": "+91-11-45304480 (Grand Godwin), +91-11-45094949 (Godwin Deluxe)",
     "travelDeskPhone": "+91-88600-81995 (Airport Transfers & Delhi / Agra Tours - Call & WhatsApp)",
     "centralEmail": "book@godwinhotels.com",
+    "corporateBookingContact": {
+      "purpose": "Bulk Booking / Corporate Booking",
+      "contactPerson": "Raman Mankotia",
+      "email": "mail@godwinhotels.com"
+    },
     "restaurantPhone": "+91-88600-81991 (The Indian Grill - Call & WhatsApp)",
     "starRating": "Boutique Luxury Standards",
     "currencyAccepted": ["INR", "USD", "EUR", "AED"],
