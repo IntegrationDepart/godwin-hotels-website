@@ -266,6 +266,27 @@ ul { list-style: none; }
   transition: transform 0.3s var(--ease-out);
 }
 .brand-logo:hover .brand-crest { transform: rotate(-8deg) scale(1.06); }
+.brand-crest-img {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+  display: block;
+  flex-shrink: 0;
+}
+.brand-logo:hover .brand-crest-img {
+  transform: rotate(-6deg) scale(1.08);
+  box-shadow: 0 6px 18px rgba(200, 146, 46, 0.3);
+}
+.footer-brand-crest-img {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  display: block;
+  flex-shrink: 0;
+}
 .brand-text-wrap { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name {
   font-family: var(--font-display); font-weight: 700;

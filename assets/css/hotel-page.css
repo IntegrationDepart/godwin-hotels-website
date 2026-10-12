@@ -31,18 +31,23 @@
   flex-shrink: 0;
 }
 
-.grand-site-header .brand-crest {
+.grand-site-header .brand-crest,
+.grand-site-header .brand-crest-img {
   width: 44px;
   height: 44px;
   min-width: 44px;
   border-radius: 50%;
+  box-shadow: 0 0 16px rgba(217, 169, 74, 0.35);
+  flex-shrink: 0;
+  display: block;
+}
+
+.grand-site-header .brand-crest {
   background: linear-gradient(135deg, var(--gold-600) 0%, var(--gold-400) 50%, var(--gold-700) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
-  box-shadow: 0 0 16px rgba(217, 169, 74, 0.35);
-  flex-shrink: 0;
 }
 
 .grand-site-header .brand-text-wrap {
@@ -78,10 +83,13 @@
     min-width: 0;
     max-width: calc(100% - 48px);
   }
-  .grand-site-header .brand-crest {
+  .grand-site-header .brand-crest,
+  .grand-site-header .brand-crest-img {
     width: 32px;
     height: 32px;
     min-width: 32px;
+  }
+  .grand-site-header .brand-crest {
     font-size: 1rem;
   }
   .grand-site-header .brand-name {

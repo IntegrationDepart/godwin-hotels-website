@@ -1,0 +1,21 @@
+{
+  "name": "Godwin Hotels New Delhi",
+  "short_name": "Godwin Hotels",
+  "description": "Hotel Grand Godwin & Hotel Godwin Deluxe in Central New Delhi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080f1d",
+  "theme_color": "#080f1d",
+  "icons": [
+    {
+      "src": "/assets/images/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
