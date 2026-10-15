@@ -406,9 +406,25 @@
   padding: 2.2rem 2.5rem;
   color: #fff;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-  margin-top: -3.5rem;
+  margin-top: 2rem;
   position: relative;
   z-index: 20;
+}
+
+/* ─── Hotel Floating Booking Bar ─── */
+.booking-bar-section {
+  position: relative;
+  z-index: 25;
+  margin-top: -3.5rem;
+  padding: 0 1.5rem;
+}
+
+.booking-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  padding-right: 2rem;
 }
 
 .gb-banner-grid {
@@ -426,7 +442,11 @@
 @media (max-width: 680px) {
   .gb-compliance-banner {
     padding: 1.4rem 1.1rem;
-    margin-top: -2.5rem;
+    margin-top: 1.5rem;
+  }
+  .booking-bar-section {
+    margin-top: -1.75rem;
+    padding: 0 1rem;
   }
   .gb-badge-pill {
     white-space: normal;

@@ -631,16 +631,29 @@ function initGodwinDeluxeBooking() {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const targetCat = btn.getAttribute('data-category');
-      if (roomSelect && targetCat) {
-        for (let i = 0; i < roomSelect.options.length; i++) {
-          if (roomSelect.options[i].value.includes(targetCat)) {
-            roomSelect.selectedIndex = i;
-            break;
+      const modal = document.getElementById('bookingModal');
+      if (modal) {
+        const destSel = document.getElementById('modalDestination');
+        if (destSel) {
+          for (let opt of destSel.options) {
+            if (opt.value.includes('Deluxe')) { opt.selected = true; break; }
           }
         }
-        updatePricing();
+        const roomSel = document.getElementById('modalRoomType');
+        if (roomSel && targetCat) {
+          for (let opt of roomSel.options) {
+            if (opt.value.toLowerCase().includes(targetCat.toLowerCase())) {
+              opt.selected = true;
+              break;
+            }
+          }
+        }
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (typeof updateBill === 'function') updateBill();
+      } else {
+        document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
       }
-      document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
     });
   });
 }

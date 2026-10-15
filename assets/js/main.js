@@ -236,6 +236,22 @@ function initBookingModal() {
    'addonBreakfast', 'addonTransfer'].forEach(id => {
     document.getElementById(id)?.addEventListener('change', updateBill);
   });
+
+  // Hotel selector change auto-selects corresponding room
+  document.getElementById('modalDestination')?.addEventListener('change', (e) => {
+    const isDeluxe = e.target.value.includes('Deluxe');
+    const roomSel = document.getElementById('modalRoomType');
+    if (roomSel) {
+      for (let opt of roomSel.options) {
+        const optIsDeluxe = opt.parentElement?.label?.includes('Deluxe') || opt.value.includes('Premier') || opt.value.includes('Standard');
+        if (optIsDeluxe === isDeluxe) {
+          opt.selected = true;
+          break;
+        }
+      }
+    }
+    updateBill();
+  });
 }
 
 function updateBill() {
@@ -305,6 +321,28 @@ function initBookingForms() {
     if (checkin)  { const el = document.getElementById('modalCheckin');  if (el) el.value = checkin; }
     if (checkout) { const el = document.getElementById('modalCheckout'); if (el) el.value = checkout; }
 
+    // Pre-fill guests
+    const modalGuests = document.getElementById('modalGuests');
+    if (modalGuests && guests) {
+      if (guests.includes('1 Guest') || guests.includes('1 Adult')) modalGuests.value = '1';
+      else if (guests.includes('3 Guest') || guests.includes('3 Adult')) modalGuests.value = '3';
+      else if (guests.includes('4+') || guests.includes('Family')) modalGuests.value = '4';
+      else modalGuests.value = '2';
+    }
+
+    // Auto-select room type based on hotel
+    const roomSel = document.getElementById('modalRoomType');
+    if (roomSel && hotel) {
+      const isDeluxe = hotel.includes('Deluxe');
+      for (let opt of roomSel.options) {
+        const optIsDeluxe = opt.parentElement?.label?.includes('Deluxe') || opt.value.includes('Premier') || opt.value.includes('Standard');
+        if (optIsDeluxe === isDeluxe) {
+          opt.selected = true;
+          break;
+        }
+      }
+    }
+
     document.getElementById('bookingModal')?.classList.add('open');
     document.body.style.overflow = 'hidden';
     updateBill();
@@ -328,8 +366,29 @@ function initBookingForms() {
       return;
     }
 
-    // WhatsApp handoff
     const total = document.getElementById('billTotal')?.textContent || '';
+
+    // Asynchronously log inquiry to server API
+    const apiEndpoint = window.location.pathname.includes('/hotel-') ? '../api/book.php' : 'api/book.php';
+    try {
+      fetch(apiEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          phone: phone,
+          destination: hotel,
+          room: document.getElementById('modalRoomType')?.value || 'Room',
+          checkin: checkin,
+          checkout: checkout,
+          guests: document.getElementById('modalGuests')?.value || '2 Guests',
+          total: total
+        })
+      }).catch(() => {});
+    } catch (err) {}
+
+    // WhatsApp handoff
     const msg = encodeURIComponent(
       `Hello Godwin Hotels Delhi,\n\nI have a booking query:\n\n` +
       `Hotel: ${hotel}\n` +

@@ -394,6 +394,46 @@
       </div>
     </section>
 
+    <!-- ─── FLOATING BOOKING BAR ─── -->
+    <div class="booking-bar-section" id="booking">
+      <div class="booking-bar" role="search" aria-label="Quick Room Booking">
+        <div class="booking-bar-header">
+          <span class="booking-bar-title"><i class="fa-solid fa-calendar-check"></i> &nbsp;Quick Room Search — Best Rate Guaranteed</span>
+        </div>
+        <form id="quickBookingForm" class="booking-bar-body" aria-label="Quick Booking Form">
+          <div class="booking-field">
+            <label for="bookingHotel"><i class="fa-solid fa-hotel"></i> Select Hotel</label>
+            <select id="bookingHotel" required>
+              <option value="Hotel Godwin Deluxe, New Delhi" selected>Hotel Godwin Deluxe</option>
+              <option value="Hotel Grand Godwin, New Delhi">Hotel Grand Godwin</option>
+            </select>
+          </div>
+          <div class="booking-field">
+            <label for="checkinDate"><i class="fa-regular fa-calendar"></i> Check-In</label>
+            <input type="date" id="checkinDate" required aria-label="Check-in date">
+          </div>
+          <div class="booking-field">
+            <label for="checkoutDate"><i class="fa-regular fa-calendar"></i> Check-Out</label>
+            <input type="date" id="checkoutDate" required aria-label="Check-out date">
+          </div>
+          <div class="booking-field">
+            <label for="bookingGuests"><i class="fa-solid fa-user-group"></i> Guests</label>
+            <select id="bookingGuests">
+              <option value="1 Guest, 1 Room">1 Guest, 1 Room</option>
+              <option value="2 Guests, 1 Room" selected>2 Guests, 1 Room</option>
+              <option value="3 Guests (Max Room Occupancy)">3 Guests (Max Room Occupancy)</option>
+              <option value="4+ Guests (Family / 2 Rooms)">4+ Guests (Family / 2 Rooms)</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" class="booking-submit">
+              <i class="fa-solid fa-magnifying-glass"></i> Check Rates
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- ─── GOOGLE BUSINESS LISTING COMPLIANCE BANNER ─── -->
     <section class="container">
       <div class="gb-compliance-banner">
@@ -1189,148 +1229,6 @@
       </div>
     </section>
 
-    <!-- ─── FAST CHECKOUT & RESERVATION ENGINE WITH ADDRESS AUTOCOMPLETE (Card 2 Compliance) ─── -->
-    <section class="booking-section" id="booking" style="padding:5.5rem 0;background:var(--ivory);">
-      <div class="container" style="max-width:980px;">
-        
-        <div class="section-header-center" style="margin-bottom:2rem;">
-          <div class="gb-badge-pill" style="margin-bottom:0.75rem;">
-            <i class="fa-solid fa-bolt"></i> Google Address Autocomplete &amp; Fast Checkout
-          </div>
-          <h2 class="section-title">Direct Room Reservation &amp; Inquiry</h2>
-          <p class="section-lead">Book directly for guaranteed best rates, complimentary high-speed Wi-Fi, and personalized concierge care.</p>
-        </div>
-
-        <div style="background:var(--white);border-radius:var(--radius-lg);padding:2.5rem;box-shadow:var(--shadow-md);border:1px solid rgba(200,146,46,0.3);">
-          
-          <form id="deluxeReservationForm">
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr));gap:1.25rem;margin-bottom:1.5rem;">
-              
-              <!-- Room Category Selector -->
-              <div>
-                <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                  <i class="fa-solid fa-bed" style="color:var(--gold-600);"></i> Room Category (26 Rooms)
-                </label>
-                <select id="deluxeResRoomCategory" style="width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,46,0.35);border-radius:var(--radius-md);background:#fff;font-family:inherit;font-size:0.9rem;">
-                  <option value="Standard ( Ground Floor )">Standard ( Ground Floor ) — Max 2 Guests</option>
-                  <option value="Premier King Room with Air-Purifier" selected>Premier King Room with Air-Purifier — Max 3 Guests</option>
-                  <option value="Premier Twin Bed Room with Air-Purifier">Premier Twin Bed Room with Air-Purifier — Max 3 Guests</option>
-                  <option value="Premier Studio King Room with Air-Purifier">Premier Studio King Room with Air-Purifier — Max 3 Guests</option>
-                </select>
-              </div>
-
-              <!-- Check-in Date -->
-              <div>
-                <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                  <i class="fa-solid fa-calendar" style="color:var(--gold-600);"></i> Check-in Date
-                </label>
-                <input type="date" id="deluxeResCheckin" required style="width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,46,0.35);border-radius:var(--radius-md);font-family:inherit;font-size:0.9rem;">
-              </div>
-
-              <!-- Check-out Date -->
-              <div>
-                <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                  <i class="fa-solid fa-calendar-check" style="color:var(--gold-600);"></i> Check-out Date
-                </label>
-                <input type="date" id="deluxeResCheckout" required style="width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,46,0.35);border-radius:var(--radius-md);font-family:inherit;font-size:0.9rem;">
-              </div>
-
-              <!-- Guests Selector -->
-              <div>
-                <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                  <i class="fa-solid fa-users" style="color:var(--gold-600);"></i> Guests
-                </label>
-                <select id="deluxeResGuests" style="width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,46,0.35);border-radius:var(--radius-md);background:#fff;font-family:inherit;font-size:0.9rem;">
-                  <option value="1 Adult, 1 Room">1 Adult, 1 Room</option>
-                  <option value="2 Adults, 1 Room" selected>2 Adults, 1 Room</option>
-                  <option value="2 Adults + 1 Child">2 Adults + 1 Child</option>
-                  <option value="3 Guests (Max Room Occupancy)">3 Guests (Max Room Occupancy)</option>
-                  <option value="4+ Guests (Family / 2 Rooms)">4+ Guests (Family / 2 Rooms)</option>
-                </select>
-                <input type="hidden" id="deluxeResNights" value="1">
-              </div>
-
-            </div>
-
-            <!-- Guest Details -->
-            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr));gap:1.25rem;margin-bottom:1.5rem;">
-              <div>
-                <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                  <i class="fa-solid fa-user" style="color:var(--gold-600);"></i> Primary Guest Full Name *
-                </label>
-                <input type="text" id="deluxeResGuestName" placeholder="e.g. Vikram Malhotra / John Smith" required 
-                       style="width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,46,0.35);border-radius:var(--radius-md);font-family:inherit;font-size:0.9rem;">
-              </div>
-
-              <div>
-                <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                  <i class="fa-solid fa-phone" style="color:var(--gold-600);"></i> Phone / Mobile Number *
-                </label>
-                <input type="tel" id="deluxeResGuestPhone" placeholder="e.g. +91 98765 43210" required 
-                       style="width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,46,0.35);border-radius:var(--radius-md);font-family:inherit;font-size:0.9rem;">
-              </div>
-
-              <div>
-                <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                  <i class="fa-solid fa-envelope" style="color:var(--gold-600);"></i> Email Address *
-                </label>
-                <input type="email" id="deluxeResGuestEmail" placeholder="e.g. guest@example.com" required 
-                       style="width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,146,46,0.35);border-radius:var(--radius-md);font-family:inherit;font-size:0.9rem;">
-              </div>
-            </div>
-
-            <!-- Address Autocomplete Field (Google Card 2 Compliance) -->
-            <div style="margin-bottom:1.75rem;">
-              <label style="display:block;font-size:0.8rem;font-weight:600;color:var(--navy-850);margin-bottom:0.4rem;">
-                <i class="fa-solid fa-location-dot" style="color:#ea4335;"></i> Guest City / Origin Address (Google Address Autocomplete)
-              </label>
-              
-              <div class="autocomplete-container">
-                <div class="autocomplete-input-wrap">
-                  <i class="fa-solid fa-magnifying-glass-location autocomplete-icon"></i>
-                  <input type="text" 
-                         id="deluxeResGuestAddress" 
-                         class="autocomplete-input deluxe-address-autocomplete" 
-                         placeholder="Type city, station, airport, or locality (e.g. Connaught Place, Mumbai, Jaipur, London)..."
-                         autocomplete="off">
-                  <button type="button" class="btn-locate-me" title="Detect location automatically via GPS">
-                    <i class="fa-solid fa-crosshairs"></i> Auto-detect
-                  </button>
-                </div>
-              </div>
-              <span style="font-size:0.74rem;color:#70757a;margin-top:0.35rem;display:inline-block;">
-                <i class="fa-brands fa-google" style="color:#4285f4;"></i> Autocomplete powered for faster checkout &amp; seamless guest registration.
-              </span>
-            </div>
-
-            <!-- Pricing Summary Card -->
-            <div id="deluxeResSummaryBox" style="background:var(--gold-50);border:1px solid rgba(200,146,46,0.25);border-radius:var(--radius-md);padding:1.25rem;margin-bottom:1.75rem;">
-              <!-- Dynamically updated by assets/js/hotel-godwin-deluxe.js -->
-            </div>
-
-            <!-- Form Action Buttons -->
-            <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;">
-              <button type="submit" class="btn-gold" style="padding:0.9rem 2.2rem;font-size:0.95rem;border-radius:999px;">
-                <i class="fa-solid fa-paper-plane"></i> Send Booking Query
-              </button>
-
-              <a id="deluxeResWhatsAppBtn" href="https://wa.me/918860081994" target="_blank" rel="noopener noreferrer"
-                 style="display:inline-flex;align-items:center;gap:0.5rem;background:#25d366;color:#fff;padding:0.9rem 1.8rem;border-radius:999px;font-size:0.92rem;font-weight:600;">
-                <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
-              </a>
-
-              <a href="tel:+918860081992" style="font-size:0.85rem;color:var(--navy-850);font-weight:600;display:inline-flex;align-items:center;gap:0.4rem;">
-                <i class="fa-solid fa-phone" style="color:var(--gold-600);"></i> Reception: +91 88600 81992
-              </a>
-            </div>
-
-          </form>
-
-        </div>
-
-      </div>
-    </section>
-
     <!-- ─── GOOGLE BUSINESS LISTING VERIFIED REVIEWS & SOCIAL PROOF ─── -->
     <section class="reviews-section" id="google-profile" style="padding:5.5rem 0;background:var(--white);">
       <div class="container">
@@ -1696,6 +1594,121 @@
       <a href="#booking" class="btn-gold" style="padding:0.55rem 1rem;font-size:0.8rem;border-radius:999px;">
         Book Now
       </a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       BOOKING MODAL
+  ══════════════════════════════════════════ -->
+  <div class="modal-backdrop" id="bookingModal" aria-modal="true" role="dialog" aria-labelledby="modalHeading">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3 class="modal-head-title" id="modalHeading"><i class="fa-solid fa-calendar-check"></i> Send Booking Query</h3>
+        <button class="modal-close" id="closeBookingModal" aria-label="Close Booking Query Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modalReservationForm">
+          <div class="modal-form-grid">
+            <div class="form-group">
+              <label for="modalDestination"><i class="fa-solid fa-hotel"></i> Select Hotel</label>
+              <select id="modalDestination" required>
+                <option value="Hotel Godwin Deluxe, New Delhi" selected>Hotel Godwin Deluxe (New Delhi)</option>
+                <option value="Hotel Grand Godwin, New Delhi">Hotel Grand Godwin (New Delhi)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="modalRoomType"><i class="fa-solid fa-bed"></i> Room Type</label>
+              <select id="modalRoomType" required>
+                <optgroup label="Hotel Godwin Deluxe (26 Rooms)">
+                  <option value="Standard ( Ground Floor )" data-price="3500">Standard ( Ground Floor ) — Max 2 Guests (180 sq.ft)</option>
+                  <option value="Premier King Room with Air-Purifier" data-price="4800" selected>Premier King Room with Air-Purifier — Max 3 Guests (250 sq.ft)</option>
+                  <option value="Premier Twin Bed Room with Air-Purifier" data-price="4800">Premier Twin Bed Room with Air-Purifier — Max 3 Guests (288 sq.ft)</option>
+                  <option value="Premier Studio King Room with Air-Purifier" data-price="5600">Premier Studio King Room with Air-Purifier — Max 3 Guests (450 sq.ft)</option>
+                </optgroup>
+                <optgroup label="Hotel Grand Godwin (39 Rooms)">
+                  <option value="Superior Room" data-price="3800">Superior Room — Max 3 Guests (180 sq.ft)</option>
+                  <option value="Executive Room" data-price="4400">Executive Room — Max 3 Guests (225 sq.ft)</option>
+                  <option value="Executive Twin Room" data-price="4400">Executive Twin Room — Max 3 Guests (225 sq.ft)</option>
+                  <option value="Studio Room with Air-Purifier" data-price="4800">Studio Room with Air-Purifier — Max 3 Guests (275 sq.ft)</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="modalCheckin"><i class="fa-regular fa-calendar"></i> Check-In Date</label>
+              <input type="date" id="modalCheckin" required>
+            </div>
+            <div class="form-group">
+              <label for="modalCheckout"><i class="fa-regular fa-calendar"></i> Check-Out Date</label>
+              <input type="date" id="modalCheckout" required>
+            </div>
+            <div class="form-group">
+              <label for="modalGuests"><i class="fa-solid fa-user-group"></i> Adults</label>
+              <select id="modalGuests">
+                <option value="1">1 Adult</option>
+                <option value="2" selected>2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">Family (2 Rooms)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="modalRooms"><i class="fa-solid fa-door-open"></i> Rooms</label>
+              <select id="modalRooms">
+                <option value="1" selected>1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="guestFullName"><i class="fa-solid fa-user"></i> Full Name</label>
+              <input type="text" id="guestFullName" placeholder="e.g. Vikram Malhotra" required>
+            </div>
+            <div class="form-group">
+              <label for="guestPhone"><i class="fa-solid fa-phone"></i> Mobile Number</label>
+              <input type="tel" id="guestPhone" placeholder="+91 88600 81994" required>
+            </div>
+            <div class="form-group full-col">
+              <label for="guestEmail"><i class="fa-solid fa-envelope"></i> Email Address *</label>
+              <input type="email" id="guestEmail" placeholder="guest@example.com" required>
+            </div>
+          </div>
+
+          <!-- Add-ons -->
+          <div style="background:var(--ivory);padding:1rem 1.2rem;border-radius:var(--radius-sm);border:1px solid var(--cream);margin-top:0.5rem;">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.7rem;">Add-on Privileges</div>
+            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;cursor:pointer;">
+                <input type="checkbox" id="addonBreakfast" checked> Buffet Breakfast at Rooftop Restaurant <span style="color:var(--text-muted)">(+₹550/guest/day)</span>
+              </label>
+              <label style="display:flex;align-items:center;gap:0.45rem;font-size:0.84rem;cursor:pointer;">
+                <input type="checkbox" id="addonTransfer"> IGI Airport Chauffeur Transfer <span style="color:var(--text-muted)">(+₹950)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Bill Summary -->
+          <div class="bill-summary">
+            <div class="bill-row"><span>Stay Duration:</span><span id="billNights">1 Night(s) × 1 Room</span></div>
+            <div class="bill-row"><span>Room Rate:</span><span id="billRoomRate">₹4,800</span></div>
+            <div class="bill-row"><span>Add-ons:</span><span id="billAddons">₹550</span></div>
+            <div class="bill-row"><span>Subtotal:</span><span id="billSubtotal">₹5,350</span></div>
+            <div class="bill-row"><span>GST (12%):</span><span id="billTax">₹642</span></div>
+            <div class="bill-row total-row"><span>Grand Total:</span><span id="billTotal">₹5,992</span></div>
+          </div>
+
+          <div style="font-size:0.76rem;color:#7f1d1d;margin:0.85rem 0;line-height:1.5;background:#fff8f6;border:1px solid #ffd8d0;padding:0.65rem 0.85rem;border-radius:var(--radius-sm);">
+            <i class="fa-solid fa-circle-exclamation" style="color:#d9381e;"></i>
+            <strong>Guest Policy:</strong> Primary guest must be 18+ years with valid physical government ID. <strong>Local Delhi IDs are strictly not accepted</strong> (no refunds applicable).
+          </div>
+
+          <button type="submit" class="btn-gold" style="width:100%;justify-content:center;font-size:0.88rem;padding:1rem;border-radius:var(--radius-sm);">
+            <i class="fa-solid fa-paper-plane"></i> Send Booking Query
+          </button>
+
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.85rem;text-align:center;line-height:1.5;">
+            <i class="fa-solid fa-briefcase" style="color:var(--gold-600);"></i> <strong>Bulk / Corporate Booking:</strong> Contact <strong>Raman Mankotia</strong> at <a href="mailto:mail@godwinhotels.com" style="color:var(--gold-600);font-weight:600;">mail@godwinhotels.com</a>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
