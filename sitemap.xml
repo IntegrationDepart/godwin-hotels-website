@@ -6,7 +6,7 @@
   <!-- ─── PRIMARY CANONICAL PAGES ─── -->
   <url>
     <loc>https://godwinhotels.com/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -33,7 +33,7 @@
 
   <url>
     <loc>https://godwinhotels.com/hotel-grand-godwin/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -80,7 +80,7 @@
 
   <url>
     <loc>https://godwinhotels.com/hotel-godwin-deluxe/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -112,7 +112,7 @@
 
   <url>
     <loc>https://godwinhotels.com/delhi-sightseeing/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
     <image:image>
@@ -164,7 +164,7 @@
 
   <url>
     <loc>https://godwinhotels.com/policies/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -172,37 +172,37 @@
   <!-- ─── DELHI & AGRA SIGHTSEEING TOURS ─── -->
   <url>
     <loc>https://godwinhotels.com/delhi-sightseeing/#day-tour</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/delhi-sightseeing/#agra-tour</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/delhi-sightseeing/#monuments</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/delhi-sightseeing/#bazaars</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/delhi-sightseeing/#agra-itinerary</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/delhi-sightseeing/#faq</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -210,37 +210,37 @@
   <!-- ─── HOTEL GRAND GODWIN SECTIONS ─── -->
   <url>
     <loc>https://godwinhotels.com/hotel-grand-godwin/#rooms-39</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-grand-godwin/#amenities</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-grand-godwin/#amenity-map</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-grand-godwin/#booking</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-grand-godwin/#faq</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-grand-godwin/#contact</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -248,81 +248,87 @@
   <!-- ─── HOTEL GODWIN DELUXE SECTIONS ─── -->
   <url>
     <loc>https://godwinhotels.com/hotel-godwin-deluxe/#rooms-26</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-godwin-deluxe/#amenities</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-godwin-deluxe/#amenity-map</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-godwin-deluxe/#booking</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-godwin-deluxe/#faq</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/hotel-godwin-deluxe/#contact</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <!-- ─── MAIN DOMAIN / GROUP SECTIONS ─── -->
   <url>
+    <loc>https://godwinhotels.com/#booking</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://godwinhotels.com/#destinations</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/#rooms</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/#dining</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/#rooftop</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/#facts</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/#faq</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://godwinhotels.com/#contact</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -330,7 +336,7 @@
   <!-- ─── DATA & AI ENGINE RESOURCE ─── -->
   <url>
     <loc>https://godwinhotels.com/facts-sheet.json</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
