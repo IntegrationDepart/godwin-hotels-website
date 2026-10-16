@@ -1,0 +1,64 @@
+#block-search, #block-search * {
+    box-sizing: border-box;
+}
+
+#block-search {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    background: #F6F2EC;
+    border-radius: 20px;
+}
+
+.be-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.booking-bar-section,
+.be-hidden,
+#booking.booking-section {
+    display: none !important;
+}
+
+.be-form {
+    padding-block: 20px;
+    background: var(--white);
+}
+
+.be-booking-btn {
+    height: 100%;
+}
+
+.nav-cta.be-booking-btn {
+    height: 38px;
+}
+
+.floating-concierge {
+    bottom: max(6rem, calc(1rem + env(safe-area-inset-bottom)));
+}
+
+@media screen and (min-width: 1280px) {
+    #block-search {
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        width: 100%;
+        background: rgba(246, 242, 236, 0.7);
+        backdrop-filter: blur(18px);
+        box-shadow: 0 -3px 20px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 0;
+    }
+
+    .site-footer {
+        padding-bottom: 90px;
+    }
+
+    .floating-action-bar {
+        display: none !important;
+    }
+
+    .be-form {
+        padding: 0;
+    }
+}
