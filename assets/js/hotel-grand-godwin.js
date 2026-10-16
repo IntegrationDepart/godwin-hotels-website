@@ -643,33 +643,18 @@ function initGrandGodwinBooking() {
     }
   });
 
-  // Category quick select buttons
+  // Category quick reserve buttons -> Go to Quick Room Search
   document.querySelectorAll('.select-room-cat-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const targetCat = btn.getAttribute('data-category');
-      const modal = document.getElementById('bookingModal');
-      if (modal) {
-        const destSel = document.getElementById('modalDestination');
-        if (destSel) {
-          for (let opt of destSel.options) {
-            if (opt.value.includes('Grand Godwin')) { opt.selected = true; break; }
-          }
-        }
-        const roomSel = document.getElementById('modalRoomType');
-        if (roomSel && targetCat) {
-          for (let opt of roomSel.options) {
-            if (opt.value.toLowerCase().includes(targetCat.toLowerCase())) {
-              opt.selected = true;
-              break;
-            }
-          }
-        }
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        if (typeof updateBill === 'function') updateBill();
+      if (typeof window.goToQuickRoomSearch === 'function') {
+        window.goToQuickRoomSearch('Hotel Grand Godwin, New Delhi', targetCat);
       } else {
-        document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' });
+        const bookingSec = document.getElementById('booking');
+        if (bookingSec) {
+          bookingSec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
       }
     });
   });

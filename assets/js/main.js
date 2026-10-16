@@ -181,6 +181,63 @@ function initFAQ() {
 }
 
 /* ─────────────────────────────────────────
+   QUICK ROOM SEARCH SCROLL & PULSE
+───────────────────────────────────────── */
+let preselectedRoomFromReserve = null;
+
+function goToQuickRoomSearch(destination, roomType) {
+  const bookingSec = document.getElementById('booking');
+  if (!bookingSec) return;
+
+  if (roomType) {
+    preselectedRoomFromReserve = roomType;
+  }
+
+  // Pre-select hotel in quick booking dropdown if present
+  const hotelSelect = document.getElementById('bookingHotel');
+  if (hotelSelect && destination) {
+    for (let opt of hotelSelect.options) {
+      if (
+        (destination.toLowerCase().includes('grand') && opt.value.toLowerCase().includes('grand')) ||
+        (destination.toLowerCase().includes('deluxe') && opt.value.toLowerCase().includes('deluxe'))
+      ) {
+        opt.selected = true;
+        break;
+      }
+    }
+  }
+
+  // Smooth scroll with offset for fixed/sticky header
+  const headerOffset = 90;
+  const elementPosition = bookingSec.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  window.scrollTo({
+    top: Math.max(0, offsetPosition),
+    behavior: 'smooth'
+  });
+
+  // Pulse effect on the booking bar to catch attention
+  const bar = bookingSec.querySelector('.booking-bar') || bookingSec;
+  bar.classList.remove('booking-highlight-pulse');
+  void bar.offsetWidth; // force reflow
+  bar.classList.add('booking-highlight-pulse');
+
+  // Focus on Check-In date or hotel selector
+  setTimeout(() => {
+    const checkin = document.getElementById('checkinDate');
+    if (checkin) {
+      try {
+        checkin.focus({ preventScroll: true });
+      } catch (err) {
+        checkin.focus();
+      }
+    }
+  }, 450);
+}
+
+window.goToQuickRoomSearch = goToQuickRoomSearch;
+
+/* ─────────────────────────────────────────
    BOOKING MODAL
 ───────────────────────────────────────── */
 function initBookingModal() {
@@ -218,7 +275,14 @@ function initBookingModal() {
   }
 
   triggers.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      // If button text or intent is to Reserve a room, send them to quick room search instead
+      const text = btn.textContent.trim().toLowerCase();
+      if (text.includes('reserve') || btn.classList.contains('reserve-room-btn')) {
+        e.preventDefault();
+        goToQuickRoomSearch(btn.dataset.destination || null, btn.dataset.room || null);
+        return;
+      }
       openModal(
         btn.dataset.destination || null,
         btn.dataset.room || null,
@@ -330,15 +394,30 @@ function initBookingForms() {
       else modalGuests.value = '2';
     }
 
-    // Auto-select room type based on hotel
+    // Auto-select room type based on preselected room or hotel
     const roomSel = document.getElementById('modalRoomType');
-    if (roomSel && hotel) {
-      const isDeluxe = hotel.includes('Deluxe');
-      for (let opt of roomSel.options) {
-        const optIsDeluxe = opt.parentElement?.label?.includes('Deluxe') || opt.value.includes('Premier') || opt.value.includes('Standard');
-        if (optIsDeluxe === isDeluxe) {
-          opt.selected = true;
-          break;
+    if (roomSel) {
+      let matched = false;
+      if (preselectedRoomFromReserve) {
+        for (let opt of roomSel.options) {
+          if (
+            opt.value.toLowerCase().includes(preselectedRoomFromReserve.toLowerCase()) ||
+            preselectedRoomFromReserve.toLowerCase().includes(opt.value.toLowerCase())
+          ) {
+            opt.selected = true;
+            matched = true;
+            break;
+          }
+        }
+      }
+      if (!matched && hotel) {
+        const isDeluxe = hotel.includes('Deluxe');
+        for (let opt of roomSel.options) {
+          const optIsDeluxe = opt.parentElement?.label?.includes('Deluxe') || opt.value.includes('Premier') || opt.value.includes('Standard');
+          if (optIsDeluxe === isDeluxe) {
+            opt.selected = true;
+            break;
+          }
         }
       }
     }
@@ -346,6 +425,24 @@ function initBookingForms() {
     document.getElementById('bookingModal')?.classList.add('open');
     document.body.style.overflow = 'hidden';
     updateBill();
+  });
+
+  // Global listeners for any reserve buttons
+  document.querySelectorAll('.reserve-room-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToQuickRoomSearch(btn.dataset.destination || null, btn.dataset.room || null);
+    });
+  });
+
+  // Global smooth scroll + pulse for all #booking anchor links
+  document.querySelectorAll('a[href="#booking"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dest = link.dataset.destination || (window.location.href.includes('godwin-deluxe') ? 'Hotel Godwin Deluxe' : (window.location.href.includes('grand-godwin') ? 'Hotel Grand Godwin' : null));
+      const room = link.dataset.room || link.dataset.category || null;
+      goToQuickRoomSearch(dest, room);
+    });
   });
 
   document.getElementById('modalReservationForm')?.addEventListener('submit', (e) => {
